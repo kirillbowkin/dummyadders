@@ -16,6 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { observer } from "mobx-react-lite";
 import drawerStore from "../store/DrawerStore";
+import { Box } from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -93,8 +94,8 @@ const PageDrawer = observer(() => {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
+        color="default"
         position="fixed"
-        color="transparent"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -147,6 +148,7 @@ const PageDrawer = observer(() => {
           ))}
         </List>
       </Drawer>
+      <Toolbar />
     </div>
   );
 });
