@@ -213,7 +213,7 @@ const FullAdderBoxSvg = observer(() => {
           fill="none"
           fillOpacity="0.75"
           fillRule="evenodd"
-          stroke={fullAdder.Cin ? "blue" : "#000"}
+          stroke={fullAdder.sum ? "blue" : "#000"}
           strokeDasharray="none"
           strokeMiterlimit="4"
           strokeWidth="3"
