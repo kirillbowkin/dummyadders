@@ -26,6 +26,13 @@ class HalfAdder {
   setB(B) {
     this.B = B;
   }
+
+  reset() {
+    this.A = 0;
+    this.B = 0;
+    this.sum = 0;
+    this.carry = 0;
+  }
 }
 
 export default new HalfAdder();

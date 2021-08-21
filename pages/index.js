@@ -1,12 +1,16 @@
-import Circuit from "../components/circuit";
-import Dashboard from "../components/dashboard";
+import { observer } from "mobx-react-lite";
 
-export default function Home() {
+import PageDrawer from "../components/drawer";
+import HalfAdderComponent from "../components/halfAdder/halfAdderComponent";
+import drawerStore from "../store/DrawerStore";
+
+const Home = observer(() => {
   return (
     <div className="px-4 py-4 flex flex-col items-center justify-evenly h-screen">
-      <p className="text-3xl">Cool Binary Half Adder</p>
-      <Circuit />
-      <Dashboard />
+      <PageDrawer />
+      {drawerStore.currentPage === "Half Adder" && <HalfAdderComponent />}
     </div>
   );
-}
+});
+
+export default Home;

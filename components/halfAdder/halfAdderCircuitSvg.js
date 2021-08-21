@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
-import halfAdder from "../store/HalfAdder";
+import halfAdder from "../../store/HalfAdder";
 
-const HalfAdderSvg = observer(() => {
+const HalfAdderCircuitSvg = observer(() => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -295,4 +295,4 @@ const HalfAdderSvg = observer(() => {
   );
 });
 
-export default HalfAdderSvg;
+export default HalfAdderCircuitSvg;

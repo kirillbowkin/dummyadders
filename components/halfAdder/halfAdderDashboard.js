@@ -1,14 +1,15 @@
-import Bulb from "./bulb";
-import SwitchButton from "./switchButton";
-import halfAdder from "../store/HalfAdder";
+import Bulb from "../bulb";
+import SwitchButton from "../switchButton";
+import halfAdder from "../../store/HalfAdder";
 import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
 
-const Dashboard = observer(() => {
+const HalfAdderDashboard = observer(() => {
   return (
     <div>
       <div className="pl-20 flex items-center">
         <SwitchButton
+          isOn={halfAdder.A}
           clickCallback={() => {
             halfAdder.setA(!halfAdder.A);
             halfAdder.add(halfAdder.A, halfAdder.B);
@@ -18,6 +19,7 @@ const Dashboard = observer(() => {
       </div>
       <div className="pl-20 flex items-center">
         <SwitchButton
+          isOn={halfAdder.B}
           clickCallback={() => {
             halfAdder.setB(!halfAdder.B);
             halfAdder.add(halfAdder.A, halfAdder.B);
@@ -37,4 +39,4 @@ const Dashboard = observer(() => {
   );
 });
 
-export default Dashboard;
+export default HalfAdderDashboard;
