@@ -4,6 +4,7 @@ import PageDrawer from "../components/drawer";
 import HalfAdderComponent from "../components/halfAdder/halfAdderComponent";
 import FullAdderComponent from "../components/fullAdder/fullAdderComponent";
 import drawerStore from "../store/DrawerStore";
+import FourBitAdderComponent from "../components/4bitAdder/fourBitAdderComponent";
 
 const Home = observer(() => {
   return (
@@ -11,6 +12,7 @@ const Home = observer(() => {
       <PageDrawer />
       {drawerStore.currentPage === "Half Adder" && <HalfAdderComponent />}
       {drawerStore.currentPage === "Full Adder" && <FullAdderComponent />}
+      {drawerStore.currentPage === "4 Bit Adder" && <FourBitAdderComponent />}
     </div>
   );
 });
